@@ -69,7 +69,7 @@ setState(() {
   
 colorsforbox=Colors.red;
 
-txt="Inavalid email or Password";
+txt="Inavalid email or Password. Try Again!";
 
 
 });
