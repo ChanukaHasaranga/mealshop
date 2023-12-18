@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "mealshop",
+			"path": ".."
+		},
+		{
+			"name": "assetss",
+			"path": "../../../cofeeshop/assetss"
+		}
+	],
+	"settings": {}
+}
