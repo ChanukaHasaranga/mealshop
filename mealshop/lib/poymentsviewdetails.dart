@@ -1,6 +1,13 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:mealshop/cartmodel.dart';
 import 'package:provider/provider.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:mailer/mailer.dart';
+import 'package:mailer/smtp_server.dart';
+
+import 'package:http/http.dart'as http;
 
 
 class payemntsviewdetails extends StatelessWidget {
@@ -38,7 +45,6 @@ required this.item,
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
 body: Consumer<CartModel>(
 
 
@@ -132,14 +138,64 @@ padding: const EdgeInsets.fromLTRB(36, 10, 30, 0),
 Padding(
     padding: const EdgeInsets.fromLTRB(30, 25, 30, 15),
     child: ElevatedButton(
-  onPressed: ()  { 
+  onPressed: ()  async { 
+
+String emailcontent = '''
+                      Payment Receipt
+                      
+                      Name: $name
+                      Address: $line1/$line2/$city
+                      Number: $number
+                      Total Amount: Rs. $price
+                      ''';
+
+final Uri emailApiUri=Uri.parse("https://api.emailjs.com/api/v1.0/email/send");
+const serviceid="service_bay3wld";
+
+try {
+  final response=await http.post(
+
+emailApiUri,
+body: json.encode({
+
+"Service_ID":serviceid,
+
+"Body":emailcontent
 
 
-          },
+})
+
+
+
+  );
+
+  if (response.statusCode==200) {
+
+    print("Email sent to app owner");
+    
+  }else{
+
+print("Email send fail");
+
+
+
+  }
+  
+} catch (e) {
+
+  print("Expection occured:$e");
+  
+}
+                    },     
 
 
 
 
+
+
+
+  
+  
 
 
    

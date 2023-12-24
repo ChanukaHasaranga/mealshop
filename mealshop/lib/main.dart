@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import "package:flutter/material.dart";
 import 'package:mealshop/cartmodel.dart';
+import 'package:mealshop/firstpage.dart';
 import 'package:mealshop/login.dart';
 import 'package:provider/provider.dart';
 
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "MealApp",
-      home: const login(),
+      home: const FirstPage(),
       theme: ThemeData(
         brightness: Brightness.dark,
       ),
