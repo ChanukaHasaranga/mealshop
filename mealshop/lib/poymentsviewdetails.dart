@@ -151,16 +151,25 @@ String emailcontent = '''
 
 final Uri emailApiUri=Uri.parse("https://api.emailjs.com/api/v1.0/email/send");
 const serviceid="service_bay3wld";
-
-try {
-  final response=await http.post(
+const templateId='template_0ekrw06';
+try{
+final response=await http.post(
 
 emailApiUri,
+headers: {'Content-Type':'application/json'},
 body: json.encode({
 
 "Service_ID":serviceid,
+"template_id":templateId,
+"template_parase":{
+"name":name,
+"subject":"Payment Receipt",
+"message":emailcontent
 
-"Body":emailcontent
+
+
+},
+
 
 
 })
@@ -169,23 +178,16 @@ body: json.encode({
 
   );
 
-  if (response.statusCode==200) {
-
+   if (response.statusCode == 200) {
     print("Email sent to app owner");
-    
-  }else{
-
-print("Email send fail");
-
-
-
+  } else {
+    print("Email send fail");
   }
-  
 } catch (e) {
-
-  print("Expection occured:$e");
-  
+  print("Exception occurred: $e");
 }
+  
+
                     },     
 
 
