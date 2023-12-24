@@ -69,7 +69,7 @@ setState(() {
   
 colorsforbox=Colors.red;
 
-txt="Inavalid email or Password";
+txt="Inavalid email or Password. Try Again!!";
 
 
 });
@@ -117,56 +117,58 @@ body: Center(
   
   Padding(
     padding: const EdgeInsets.fromLTRB(30, 25, 30, 10),
-    child: TextField(
-    
-    
-    
-    controller: reemail,
-    
-    decoration: InputDecoration(
-    
-    hintText: "Email",
-    
-    hintStyle: TextStyle(color: Colors.grey.shade300),
-    
-    prefixIcon: const Icon(Icons.email,color: Colors.white,),
-    
-    focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(13),borderSide:  const BorderSide(color:Colors.amber)),
-    
-    enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(13),borderSide:BorderSide(color:colorsforbox)),
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    ),
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    child: Container(
+      child: TextField(
+      
+      
+      
+      controller: reemail,
+      
+      decoration: InputDecoration(
+      
+      hintText: "Email",
+      
+      hintStyle: TextStyle(color: Colors.grey.shade300),
+      
+      prefixIcon: const Icon(Icons.email,color: Colors.white,),
+      
+      focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(13),borderSide:  const BorderSide(color:Colors.amber)),
+      
+      enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(13),borderSide:BorderSide(color:colorsforbox)),
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      ),
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      ),
     ),
   ),
   Text(txt,style: TextStyle(color: colorsforbox),),
