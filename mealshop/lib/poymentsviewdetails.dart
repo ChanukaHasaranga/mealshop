@@ -163,7 +163,7 @@ body: json.encode({
 "template_id":templateId,
 "template_parase":{
 "name":name,
-"subject":"Payment Receipt",
+"subject":"Payment Receipt!!",
 "message":emailcontent
 
 
