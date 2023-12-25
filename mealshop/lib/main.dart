@@ -3,6 +3,7 @@ import "package:flutter/material.dart";
 import 'package:mealshop/cartmodel.dart';
 import 'package:mealshop/firstpage.dart';
 import 'package:mealshop/login.dart';
+import 'package:mealshop/splashscreen.dart';
 import 'package:provider/provider.dart';
 
 void main() async {
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "MealApp",
-      home: const FirstPage(),
+      home: const splashscreen(),
       theme: ThemeData(
         brightness: Brightness.dark,
       ),
