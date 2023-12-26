@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:mealshop/cartmodel.dart';
+import 'package:mealshop/firstpage.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:mailer/mailer.dart';
@@ -187,6 +188,7 @@ body: json.encode({
   print("Exception occurred: $e");
 }
   
+  Navigator.of(context).push(MaterialPageRoute(builder:(context) => FirstPage(),));
 
                     },     
 

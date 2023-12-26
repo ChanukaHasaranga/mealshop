@@ -16,7 +16,7 @@ void initState(){
 
 super.initState();
 
-Timer(const Duration(seconds: 6), () { 
+Timer(const Duration(seconds: 5), () { 
 
 Navigator.of(context).push(MaterialPageRoute(builder:(context) {
   return login();

@@ -105,7 +105,8 @@ body: Center(
                     
                  borderRadius: BorderRadius.circular(30),
                 
-             child:Image.asset("assetss/xcopy.png",height: 100,),
+             child:Text("MealApp",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 45,fontFamily:"ins"),),
+
              
                          
              
